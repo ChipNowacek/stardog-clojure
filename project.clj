@@ -2,9 +2,13 @@
   :description "TODO"
   :url "TODO"
   :license {:name "TODO: Choose a license"
-            :url "http://choosealicense.com/"}
+            :url  "http://choosealicense.com/"}
   :dependencies [[org.clojure/clojure "1.8.0"]
+                 [stardog-clj "4.2.1"]
                  [com.stuartsierra/component "0.3.2"]]
-  :profiles {:dev {:dependencies [[org.clojure/tools.namespace "0.2.11"]
-                                  [com.stuartsierra/component.repl "0.2.0"]]
-                   :source-paths ["dev"]}})
+  :main ^:skip-aot stardog-clojure.core
+  :target-path "target/%s"
+  :profiles {:dev     {:dependencies [[org.clojure/tools.namespace "0.2.11"]
+                                      [com.stuartsierra/component.repl "0.2.0"]]
+                       :source-paths ["dev"]}
+             :uberjar {:aot :all}})
