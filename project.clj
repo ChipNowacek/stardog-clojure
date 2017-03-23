@@ -3,7 +3,7 @@
   :url "TODO"
   :license {:name "TODO: Choose a license"
             :url  "http://choosealicense.com/"}
-  :repositories {"stardog" "http://maven.stardog.com"}
+  :repositories {"stardog" {:url "http://maven.stardog.com"}}
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [stardog-clj "4.2.1"]
                  [com.stuartsierra/component "0.3.2"]]
